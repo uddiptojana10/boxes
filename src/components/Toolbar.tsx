@@ -33,27 +33,27 @@ export default function Toolbar({
   const { canUndo, canRedo } = useLayout();
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-neutral-700 bg-neutral-900 p-4">
-
-      <div className="relative">
+    <div className="toolbar">
+      <div className="toolbar-search">
         <Search
           size={18}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400"
+          className="toolbar-search-icon"
         />
 
         <input
           value={search}
           onChange={(e) => onSearch(e.target.value)}
           placeholder="Search player..."
-          className="w-72 rounded-md border border-neutral-700 bg-neutral-800 py-2 pl-10 pr-3 outline-none focus:border-amber-400"
+          className="toolbar-input"
         />
       </div>
 
-      <div className="flex gap-2">
+      <div className="toolbar-actions">
 
         <Button
           disabled={!canUndo}
           onClick={onUndo}
+          title="Undo"
         >
           <Undo2 size={16} />
         </Button>
@@ -61,19 +61,20 @@ export default function Toolbar({
         <Button
           disabled={!canRedo}
           onClick={onRedo}
+          title="Redo"
         >
           <Redo2 size={16} />
         </Button>
 
-        <Button onClick={onReset}>
+        <Button onClick={onReset} title="Reset">
           <RotateCcw size={16} />
         </Button>
 
-        <Button onClick={onImport}>
+        <Button onClick={onImport} title="Import">
           <Upload size={16} />
         </Button>
 
-        <Button onClick={onExport}>
+        <Button onClick={onExport} title="Export">
           <Download size={16} />
         </Button>
 

@@ -79,14 +79,14 @@ export default function Tile({
 
   const style =
     tile.type === "player"
-      ? "border-zinc-600 bg-gradient-to-b from-zinc-700 to-zinc-900 hover:border-amber-400"
+      ? "tile-player"
       : tile.type === "fort"
-      ? "border-red-400 bg-gradient-to-b from-red-700 to-red-900"
+      ? "tile-fort"
       : tile.type === "gate"
-      ? "border-blue-400 bg-gradient-to-b from-blue-700 to-blue-900"
+      ? "tile-gate"
       : tile.type === "outpost"
-      ? "border-orange-400 bg-gradient-to-b from-orange-600 to-orange-800"
-      : "border-green-400 bg-gradient-to-b from-green-700 to-green-900";
+      ? "tile-outpost"
+      : "tile-alliance";
 
   return (
     <>
@@ -103,13 +103,13 @@ export default function Tile({
           type="button"
           disabled={!isPlayer}
           onClick={handleClick}
-          className={`h-full w-full rounded-xl border-2 shadow-xl transition hover:scale-105 ${style} ${ring}`}
+          className={`tile-button ${style} ${ring}`}
         >
-          <div className="flex h-full flex-col items-center justify-center">
+          <div className="tile-content">
             {tile.type === "player" && (
               <>
-                <div className="text-lg">🏰</div>
-                <div className="px-1 text-center text-[11px] font-semibold leading-tight">
+                <div className="tile-emoji">🏰</div>
+                <div className="tile-name">
                   {tile.name}
                 </div>
               </>
@@ -117,24 +117,24 @@ export default function Tile({
 
             {tile.type === "fort" && (
               <>
-                <div className="text-3xl">🏯</div>
-                <div className="text-xs font-bold">Fort</div>
+                <div className="tile-emoji-large">🏯</div>
+                <div className="tile-label">Fort</div>
               </>
             )}
 
             {tile.type === "gate" && (
               <>
-                <div className="text-3xl">🚪</div>
-                <div className="text-xs font-bold">Gate</div>
+                <div className="tile-emoji-large">🚪</div>
+                <div className="tile-label">Gate</div>
               </>
             )}
 
             {tile.type === "outpost" && (
-              <div className="text-3xl">🗼</div>
+              <div className="tile-emoji-large">🗼</div>
             )}
 
             {tile.type === "alliance" && (
-              <div className="text-3xl">🏛️</div>
+              <div className="tile-emoji-large">🏛️</div>
             )}
           </div>
         </button>

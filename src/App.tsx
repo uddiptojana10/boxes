@@ -47,7 +47,7 @@ const {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-zinc-950 text-white">
+    <div className="app-container">
       <input
         ref={fileInputRef}
         hidden
@@ -56,11 +56,13 @@ const {
         onChange={handleImport}
       />
 
-      <header className="border-b border-white/10 bg-black/20 backdrop-blur-xl">
-        <div className="mx-auto max-w-[1500px] p-6">
-          <h1 className="mb-4 text-3xl font-bold text-amber-300">
-            Alliance Hive Planner
-          </h1>
+      <header className="app-header">
+        <div className="header-content">
+          <div className="header-top">
+            <h1 className="app-title">
+              Alliance Hive Planner
+            </h1>
+          </div>
 
           <Toolbar
             search={search}
@@ -74,7 +76,7 @@ const {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1700px] p-2 sm:p-4 md:p-6">
+      <main className="app-main">
         <HiveMap search={search} />
       </main>
     </div>

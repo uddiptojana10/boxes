@@ -14,14 +14,14 @@ export default function ContextMenu({
   onRemove,
 }: Props) {
   return (
-    <div className="absolute left-1/2 top-full z-50 mt-2 w-48 -translate-x-1/2 overflow-hidden rounded-lg border border-neutral-700 bg-neutral-900 shadow-2xl">
-      <div className="border-b border-neutral-700 bg-neutral-800 px-3 py-2 text-center font-semibold">
+    <div className="context-menu">
+      <div className="context-menu-header">
         {name || "Empty Slot"}
       </div>
 
       <button
         onClick={onRename}
-        className="flex w-full items-center gap-2 px-3 py-2 hover:bg-neutral-800"
+        className="context-menu-item"
       >
         <Pencil size={16} />
         Rename
@@ -29,7 +29,7 @@ export default function ContextMenu({
 
       <button
         onClick={onSwap}
-        className="flex w-full items-center gap-2 px-3 py-2 hover:bg-neutral-800"
+        className="context-menu-item"
       >
         <Shuffle size={16} />
         Swap
@@ -37,7 +37,7 @@ export default function ContextMenu({
 
       <button
         onClick={onRemove}
-        className="flex w-full items-center gap-2 px-3 py-2 text-red-400 hover:bg-neutral-800"
+        className="context-menu-item context-menu-danger"
       >
         <Trash2 size={16} />
         Remove
