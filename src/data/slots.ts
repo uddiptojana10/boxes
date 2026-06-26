@@ -1,7 +1,7 @@
 import type { Tile } from "../types";
 
 export const BOARD = {
-  width: 1450,
+  width: 1200,
   height: 1200,
 };
 
