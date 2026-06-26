@@ -17,11 +17,11 @@ export default function HiveMap({ search }: Props) {
 
   return (
     <div
-      className="w-full overflow-auto rounded-2xl"
+      className="hive-map-scroll"
       onClick={() => setOpenMenu(null)}
     >
       <div
-        className="relative rounded-2xl border border-white/10 bg-[#18231c] shadow-2xl"
+        className="hive-map-board"
         style={{
           width: BOARD.width,
           height: BOARD.height,

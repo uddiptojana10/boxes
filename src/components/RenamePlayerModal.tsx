@@ -31,24 +31,24 @@ export default function RenamePlayerModal({
       title={initialName ? "Rename Player" : "Add Player"}
       onClose={onClose}
     >
-      <div className="space-y-5">
+      <div className="modal-form">
 
         <input
           autoFocus
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Player name"
-          className="w-full rounded-md border border-neutral-700 bg-neutral-800 px-3 py-2 outline-none focus:border-amber-400"
+          className="modal-input"
         />
 
-        <div className="flex justify-end gap-3">
+        <div className="modal-actions">
 
           <Button onClick={onClose}>
             Cancel
           </Button>
 
           <Button
-            className="border-amber-500 bg-amber-600 hover:bg-amber-500"
+            className="btn-primary"
             onClick={handleSave}
           >
             Save

@@ -19,20 +19,20 @@ export default function Modal({
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+        className="modal-backdrop"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="fixed left-1/2 top-1/2 z-50 w-[420px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900 shadow-2xl">
+      <div className="modal-container">
 
-        <div className="border-b border-neutral-700 bg-neutral-800 px-5 py-4">
-          <h2 className="text-lg font-semibold text-white">
+        <div className="modal-header">
+          <h2 className="modal-title">
             {title}
           </h2>
         </div>
 
-        <div className="p-5">
+        <div className="modal-body">
           {children}
         </div>
       </div>
