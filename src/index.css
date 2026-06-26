@@ -182,41 +182,41 @@ body {
 }
 
 .tile-emoji {
-  font-size: 1.125rem;
+  font-size: 1.375rem;
   line-height: 1;
 }
 
 .tile-emoji-large {
-  font-size: 1.875rem;
+  font-size: 2.125rem;
   line-height: 1;
 }
 
 .tile-name {
   padding: 0 0.25rem;
   text-align: center;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.2;
   word-break: break-word;
 }
 
 .tile-label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1;
 }
 
 /* Tile Type Variants */
 .tile-player {
-  border-color: #52525b;
-  background: linear-gradient(135deg, #3f3f46 0%, #1f1f26 100%);
-  color: #e4e4e7;
+  border-color: #7c3aed;
+  background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);
+  color: #e9d5ff;
 }
 
 .tile-player:hover:not(:disabled) {
-  border-color: #fcd34d;
-  background: linear-gradient(135deg, #4f4f57 0%, #2f2f36 100%);
-  box-shadow: 0 12px 24px rgba(252, 211, 77, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: #fbbf24;
+  background: linear-gradient(135deg, #7e22ce 0%, #581c87 100%);
+  box-shadow: 0 12px 24px rgba(251, 191, 36, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .tile-fort {
