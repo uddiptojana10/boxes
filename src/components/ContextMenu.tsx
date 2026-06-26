@@ -1,5 +1,4 @@
-import { Pencil, Shuffle, Trash2, X } from "lucide-react";
-
+import { Pencil, Shuffle, Trash2 } from "lucide-react";
 type Props = {
   name: string;
   onRename: () => void;
