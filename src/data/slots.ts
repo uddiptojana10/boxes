@@ -1,12 +1,12 @@
 import type { Tile } from "../types";
 
 export const BOARD = {
-  width: 1200,
-  height: 1200,
+  width: 1380,
+  height: 1380,
 };
 
-export const PLAYER_WIDTH = 80;
-export const PLAYER_HEIGHT = 72;
+export const PLAYER_WIDTH = 92;
+export const PLAYER_HEIGHT = 83;
 
 const player = (
   id: string,
